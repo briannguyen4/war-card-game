@@ -2,6 +2,7 @@
 
 This is an application for that simulates the card game War between two players.
 
+![alt text](https://github.com/briannguyen4/war-card-game/blob/master/public/image.png)
 
 ## Technologies
 
