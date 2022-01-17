@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
+
 const Container = styled.div`
   position: relative;
   background-color: white;  
@@ -12,6 +13,7 @@ const Container = styled.div`
   border: 1px solid black;
   border-radius: 8px;
   font-size: 40px;
+
   ::before, ::after {
     position: absolute;
     content: attr(data-value);
@@ -31,7 +33,7 @@ const Container = styled.div`
 class Card extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { };
+        this.state = {};
         
       }
 

@@ -33,16 +33,16 @@ const Deck = styled.div`
   border: 1px solid black;
   border-radius: 8px;
   margin-right: 40px;
+  background-color: ${props => props.color};
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: ${props => props.color};
 `;
 
 const PlayerTitle = styled.span`
   font-size: 20px;
-  margin-bottom: 16px;
+  margin-bottom: 24px;
 `
 
 const Amount = styled.span`
@@ -243,9 +243,10 @@ class Game extends React.Component {
                 <Deck color="#145C9E">
                   <PlayerTitle>Player 1</PlayerTitle>
                   <Amount>{this.state.player1deck ? this.state.player1deck.length : null}</Amount>
+                  <div>Cards Remaining</div>
                 </Deck>
 
-                <Card value={this.state.player1card.value} suit={this.state.player1card.suit}/>
+                <Card value={this.state.player1card.value} suit={this.state.player1card.suit} color={this.state.player1card.color}/>
               </DeckArea>
 
               <Message> {this.state.message} </Message>
@@ -256,9 +257,11 @@ class Game extends React.Component {
                 <Deck color="#FFD25A">
                   <PlayerTitle>Player 2</PlayerTitle>
                   <Amount>{this.state.player2deck ? this.state.player2deck.length : null}</Amount>
+                  <div>Cards Remaining</div>
+                  
                 </Deck>
 
-                <Card value={this.state.player2card.value} suit={this.state.player2card.suit}/>
+                <Card value={this.state.player2card.value} suit={this.state.player2card.suit} color={this.state.player2card.color}/>
               </DeckArea>
 
           </Container>
